@@ -1,0 +1,111 @@
+[
+    {
+      "image_url": "https://i.ibb.co/CKjrvpC/resort1.jpg",
+      "estate_title": "Luxurious Beachfront Resort",
+      "id": "001",
+      "segment_name": "Hotels",
+      "description": "Experience the epitome of luxury at our beachfront resort. Featuring spacious rooms, gourmet dining options, and breathtaking ocean views.",
+      "price": "$500,000",
+      "status": "Sale",
+      "area": "5000 sq ft",
+      "location": "Coastal Paradise, ABC City",
+      "facilities": ["Infinity Pool", "Spa", "Private Beach"]
+    },
+    {
+      "image_url": "https://i.ibb.co/8Pk7ZVq/motel2.jpg",
+      "estate_title": "Cozy Mountain Unique Motel",
+      "id": "002",
+      "segment_name": "Motels",
+      "description": "Nestled amidst serene mountains, our cozy motel offers comfortable rooms and easy access to hiking trails and scenic viewpoints.",
+      "price": "$100,000",
+      "status": "Sale",
+      "area": "1500 sq ft",
+      "location": "Mountain Retreat, XYZ Town",
+      "facilities": ["Parking", "Wi-Fi", "Mountain Views"]
+    },
+    {
+      "image_url": "https://i.ibb.co/RBKTMVb/seaside3.jpg",
+      "estate_title": "Seaside Vacation Rental",
+      "id": "003",
+      "segment_name": "Vacation Rentals",
+      "description": "Escape to our charming seaside rental cottage. Enjoy stunning sunsets, beachcombing, and fresh seafood just steps from your door.",
+      "price": "$200 per night",
+      "status": "Rent",
+      "area": "800 sq ft",
+      "location": "Oceanfront Haven, PQR Village",
+      "facilities": ["Beach Access", "Outdoor Grill", "Fire Pit"]
+    },
+    {
+      "image_url": "https://i.ibb.co/gg5Hgzg/lodge4.jpg",
+      "estate_title": "Rustic Mountain Lodge",
+      "id": "004",
+      "segment_name": "Lodges",
+      "description": "Experience the beauty of nature at our rustic lodge nestled in the heart of the mountains. Cozy cabins, campfire nights, and hiking trails await.",
+      "price": "$300,000",
+      "status": "Sale",
+      "area": "3000 sq ft",
+      "location": "Mountain Retreat, XYZ Town",
+      "facilities": ["Fireplace", "Hiking Trails", "Outdoor Dining"]
+    },
+    {
+      "image_url": "https://i.ibb.co/12TqxJt/guesthouse5.jpg",
+      "estate_title": "Quaint Countryside Guesthouse",
+      "id": "005",
+      "segment_name": "Guesthouses",
+      "description": "Experience the charm of rural life at our cozy guesthouse. Tranquil surroundings, home-cooked meals, and friendly hosts await you.",
+      "price": "$150 per night",
+      "status": "Rent",
+      "area": "1200 sq ft",
+      "location": "Serene Countryside, LMN Village",
+      "facilities": ["Garden", "Farm Animals", "Homecooked Meals"]
+    },
+    {
+      "image_url": "https://i.ibb.co/23z6V3z/hotel6.jpg",
+      "estate_title": "Urban Boutique Unique Hotel",
+      "id": "006",
+      "segment_name": "Hotels",
+      "description": "Immerse yourself in city chic at our boutique hotel. Stylish rooms, rooftop bar, and trendy dining options await in the heart of downtown.",
+      "price": "$700,000",
+      "status": "Sale",
+      "area": "4000 sq ft",
+      "location": "Vibrant City Center, UVW Metropolis",
+      "facilities": ["Rooftop Bar", "Fitness Center", "Concierge Service"]
+    },
+    {
+      "image_url": "https://i.ibb.co/Zd3Z6KZ/resort7.jpg",
+      "estate_title": "Family-Friendly Unique Resort",
+      "id": "007",
+      "segment_name": "Resorts",
+      "description": "Create unforgettable memories at our family-friendly resort. From poolside fun to kids' clubs, there's something for everyone to enjoy.",
+      "price": "$1,200,000",
+      "status": "Sale",
+      "area": "6000 sq ft",
+      "location": "Sunny Beachside, STU Resort Town",
+      "facilities": ["Kids' Club", "Water Park", "Tennis Courts"]
+    },
+    {
+      "image_url": "https://i.ibb.co/m9zzSdV/id8.jpg",
+      "estate_title": "Mountain Chalet Retreat",
+      "id": "008",
+      "segment_name": "Vacation Rentals",
+      "description": "Escape the hustle and bustle at our secluded mountain chalet. Cozy interiors, panoramic views, and nearby ski slopes make it perfect for winter getaways.",
+      "price": "$250 per night",
+      "status": "Rent",
+      "area": "1500 sq ft",
+      "location": "Alpine Hideaway, VWX Village",
+      "facilities": ["Hot Tub", "Ski Access", "Game Room"]
+    },
+    {
+      "image_url": "https://i.ibb.co/NYgM1rK/lofge9.jpg",
+      "estate_title": "Wilderness Retreat Lodge",
+      "id": "009",
+      "segment_name": "Lodges",
+      "description": "Immerse yourself in nature at our wilderness retreat lodge. Surrounded by forests and wildlife, it's the perfect escape for outdoor enthusiasts.",
+      "price": "$400,000",
+      "status": "Sale",
+      "area": "2500 sq ft",
+      "location": "Remote Wilderness, YZ Town",
+      "facilities": ["Nature Trails", "Campfire Area", "Wildlife Viewing"]
+    }
+  ]
+  
