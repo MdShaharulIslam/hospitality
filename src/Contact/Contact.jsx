@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const ContactForm = () => {
   return (
-    <div>
+    <div className="mx-6">
         <Navber></Navber>
         <div className="grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto max-w-4xl bg-white text-[#333] font-[sans-serif]">
         

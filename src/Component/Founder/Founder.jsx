@@ -19,7 +19,7 @@ const Founder = () => {
               </span>
             </p>
             <div className="card-actions justify-end">
-              <Link to="/about">
+              <Link to="/contact">
                 <button className="btn bg-purple-400 animate__animated animate__fadeIn">
                   Contact
                 </button>
