@@ -3,15 +3,14 @@ import { Helmet } from "react-helmet";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navber from "../Navber/Navber";
 import { AuthContext } from "../provider/AuthProvider";
-
+import { toast } from 'react-toastify'; // Import toast
 import {
   GoogleAuthProvider,
   GithubAuthProvider,
   signInWithPopup,
   getAuth
-} from "firebase/auth";
+ } from "firebase/auth";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { toast } from 'react-toastify'; 
 
 const Login = () => {
   const auth = getAuth();
@@ -29,16 +28,15 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
-    signIn(email, password)
+    signIn(email,password)
       .then(result => {
-        console.log(result.user)
+        console.log(result.user);
+        toast.success('Sign in successful!'); // Display success message using toast
         navigate(location?.state ? location.state : '/');
-        toast.success('Sign in successful!');
       })
       .catch(error => {
         console.error(error);
-        // Display error message using toast
-        toast.error('Invalid email or password. Please try again.');
+        toast.error('Invalid email or password. Please try again.'); // Display error message using toast
       })
   };
 
