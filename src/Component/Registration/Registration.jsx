@@ -9,11 +9,11 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
 
 const Registration = () => {
-  const { createUser } = useContext(AuthContext); 
-  const notify = () => toast(registerError,succes);
-const [registerError, setRegisterError]= useState("");
+const { createUser } = useContext(AuthContext); 
+const [registerError, setRegisterError]= useState();
 const [showPassword, setShowpassword] = useState();
-const [succes, setSucces] = useState("");
+const [succes, setSucces] = useState();
+const notify = () => toast(registerError,succes);
   const handleRegister = (e) => {
         e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -22,7 +22,7 @@ const [succes, setSucces] = useState("");
     const photo = form.get("photo");
     const password = form.get("password");
     
-    console.log(name, email, photo, password);
+    // console.log(name, email, photo, password);
 
 if (password.length < 6) {
   setRegisterError(" Password should be at least 6 characters");
@@ -35,7 +35,7 @@ if (password.length < 6) {
   setRegisterError("Give a small letter must");
   return;
 }
-setRegisterError("")
+setRegisterError(null)
 setSucces("User Registration succefuly")
     createUser(email, password) 
     updateProfile(AuthContext.createUser,{
@@ -44,11 +44,12 @@ setSucces("User Registration succefuly")
     })
       .then(result => {
         console.log(result.user);
-        setSucces("User Registration succefuly");
+        // setSucces("User Registration succefuly");
+        toast.success('Sign in successful!');
       })
       .catch(error => {
-        console.error(error);
-        setRegisterError(error.message)
+        
+        setRegisterError('error',error.message)
       });
   };
 

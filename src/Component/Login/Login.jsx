@@ -9,8 +9,9 @@ import {
   GithubAuthProvider,
   signInWithPopup,
   getAuth
- } from "firebase/auth";
+} from "firebase/auth";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { toast } from 'react-toastify'; 
 
 const Login = () => {
   const auth = getAuth();
@@ -28,14 +29,17 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
-    signIn(email,password)
-     .then(result => {
-      console.log(result.user)
-navigate(location?.state?location.state:'/');
-          })
-          .catch(error=>{
-            console.error(error);
-          })
+    signIn(email, password)
+      .then(result => {
+        console.log(result.user)
+        navigate(location?.state ? location.state : '/');
+        toast.success('Sign in successful!');
+      })
+      .catch(error => {
+        console.error(error);
+        // Display error message using toast
+        toast.error('Invalid email or password. Please try again.');
+      })
   };
 
   const handleGoogleSignIn = async () => {
