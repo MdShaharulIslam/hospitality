@@ -32,9 +32,18 @@ const ContactForm = () => {
               </div>
               <a href="mailto:info@example.com" className="text-[#007bff] text-sm ml-3">
                 <small className="block">Mail</small>
-                <strong>info@example.com</strong>
+                <strong>shaharulislam025.com</strong>
               </a>
             </li>
+          </ul>
+        </div>
+        <div className="mt-12 items-center">
+          <h2 className="text-lg font-extrabold">Mobile</h2>
+          <ul className="flex mt-3 space-x-4">
+            <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+             
+            </li>
+          01777-492725
           </ul>
         </div>
         <div className="mt-12">
