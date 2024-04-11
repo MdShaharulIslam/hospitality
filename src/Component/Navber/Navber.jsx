@@ -59,10 +59,9 @@ const Navber = () => {
   );
 
   const update = e => {
-    e.preventDefault();
+       e.preventDefault();
     const photourl = e.target.photourl.value;
-
-    updateProfile(auth.currentUser, {
+     updateProfile(auth.currentUser, {
       photoURL: photourl
     })
     
