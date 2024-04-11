@@ -71,8 +71,7 @@ const Navber = () => {
       .catch((error) => {
         console.error('Error updating profile photo:', error);
       });
-      
-  };
+      };
 
   return (
 
