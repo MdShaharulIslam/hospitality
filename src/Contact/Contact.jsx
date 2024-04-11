@@ -7,8 +7,7 @@ const ContactForm = () => {
     <div className="mx-6">
         <Navber></Navber>
         <div className="grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto max-w-4xl bg-white text-[#333] font-[sans-serif]">
-        
-              <Helmet><title>Blogs</title></Helmet>
+                      <Helmet><title>Blogs</title></Helmet>
       <div>
         <h1 className="text-3xl font-extrabold">Lets Talk</h1>
         <p className="text-sm text-gray-400 mt-3">
@@ -43,7 +42,7 @@ const ContactForm = () => {
             <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
              
             </li>
-          01777-492725
+          +8801777-492725
           </ul>
         </div>
         <div className="mt-12">

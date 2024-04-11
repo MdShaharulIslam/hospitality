@@ -7,8 +7,7 @@ const Blog = () => {
         <div className='mx-6'>
             <Navber></Navber>
               <Helmet><title>Blogs</title></Helmet>
-           
-   
+              
          </div>
     );
 };
