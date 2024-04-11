@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import userME from "/public/pic.jpg";
-import "animate.css";
-
+import "animate.css"; 
 const Founder = () => {
   return (
     <div className="w-full flex border animate__animated animate__fadeInUp">
