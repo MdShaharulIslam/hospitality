@@ -37,16 +37,7 @@ const Navber = () => {
           About
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/blog"
-          activeClassName=""
-          className={`hover:text-yellow-200 ${activeClasses}`}
-        >
-         Blogs
-        </NavLink>
-      </li>
-      <li>
+          <li>
         <NavLink
           to="/contact"
           activeClassName=""

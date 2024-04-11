@@ -8,7 +8,6 @@ import Login from "../Login/Login";
 import Registration from "./../Registration/Registration";
 import PrivateRoute from "./PrivetRout";
 import UpdateProfile from "../UpdateProfile/UpdateProfile";
-import Blog from "../../Blog/Blog";
 import Contact from "../../Contact/Contact";
 
 const router = createBrowserRouter([
@@ -35,11 +34,7 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>
       },
-      {
-        path: "/blog",
-        element:<Blog></Blog>
-      },
-      {
+            {
         path: "/contact",
         element:<Contact></Contact>
       },

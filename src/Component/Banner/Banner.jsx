@@ -11,15 +11,16 @@ const Banner = () => {
           
         <div id="slide1" className="carousel-item relative w-full  ">
           <img src={hotel} className="w-full rounded-lg" />
-          <div className="hero-content text-center text-neutral-content absolute -mx-1/2">
-    <div className="max-w-md justify-start">
-      <h1 className="mb-5 text-5xl font-bold text-purple-400">Hello.. <br /><span>We are Providing best Services</span> </h1>
-      <p className="mb-5 text-purple-400">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p><Link to="/about">  <button className="btn bg-purple-400">Get in Touch</button></Link>
-        </div>
-      
-    
-  
+          <div className="hero-content text-center text-neutral-content absolute -mx-1/2 animate__animated animate__fadeIn">
+  <div className="max-w-md justify-start">
+    <h1 className="mb-5 text-5xl font-bold text-purple-400">Hello.. <br /><span>We are Providing best Services</span> </h1>
+    <p className="mb-5 text-purple-400">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+    <Link to="/about">  
+      <button className="btn bg-purple-400">Get in Touch</button>
+    </Link>
   </div>
+</div>
+
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide4" className="btn btn-circle">❮</a> 
             <a href="#slide2" className="btn btn-circle">❯</a>
