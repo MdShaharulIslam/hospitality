@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import userME from "/public/pic.jpg"; // Update image import path
 import "animate.css";
-
 const Founder = () => {
   return (
     <div className="flex animate__animated animate__fadeInUp">
