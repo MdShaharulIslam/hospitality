@@ -3,19 +3,19 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const ContactMap = () => {
   return (
-    <div className="map-container" >
+    <div className="map-container" style={{ height: "50vh", width: "100%" }}>
       <MapContainer
-        center={[24.8526, 89.3730]}
+        center={[25.1061, 89.0236]} // Joypurhat coordinates: [latitude, longitude]
         zoom={14}
         scrollWheelZoom={true}
-        style={{ height: "50vh", width: "100%" }}
+        style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="shaharul islam"
         />
-        <Marker position={[24.8526, 89.3730]}>
-          <Popup>Bogura Bangladesh</Popup>
+        <Marker position={[25.1061, 89.0236]}> {/* Joypurhat Marker */}
+          <Popup>Joypurhat, Bangladesh</Popup>
         </Marker>
       </MapContainer>
     </div>
