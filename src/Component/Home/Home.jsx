@@ -23,7 +23,7 @@ const Home = () => {
                 {products.map(product => <Products key={product.id} products={product}></Products>)}
                
             </div>
-            <div className="w-1/2 my-4">  <Founder></Founder></div>
+            <div className="w-auto my-4 justify-center">  <Founder></Founder></div>
           
            
         </div>

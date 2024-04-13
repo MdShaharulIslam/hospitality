@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import userME from "/public/pic.jpg";
-import "animate.css"; 
+import userME from "/public/pic.jpg"; // Update image import path
+import "animate.css";
+
 const Founder = () => {
   return (
-    <div className="w-full flex border animate__animated animate__fadeInUp">
+    <div className="flex animate__animated animate__fadeInUp">
       <div>
         <h1 className="text-4xl font-bold text-center mb-4">Founder</h1>
         <div className="card lg:card-side bg-base-100 shadow-xl">
-          <figure>
+          <figure className="animate__animated animate__fadeInUp">
             <img src={userME} alt="Album" />
           </figure>
           <div className="card-body">

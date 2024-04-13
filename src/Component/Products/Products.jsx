@@ -6,7 +6,7 @@ const Products = ({ products }) => {
   return (
     <div className="mb-8">
      
-      <div className="card w-96 glass">
+      <div className="card lg:w-96 md:w-96 glass">
         <figure>
           <img data-aos="fade-up" className="w-full h-48"
             src={image_url}

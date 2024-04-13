@@ -18,7 +18,7 @@ const ProductDetail = () => {
             <div className="hero rounded-xl bg-purple-400  ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left w-1/2">
-                        <h1 className="text-5xl font-bold">{product.estate_title}</h1>
+                        <h1 className=" text-2xl md:text-4xl lg:text-5xl font-bold">{product.estate_title}</h1>
                         <p className="text-gray-500 pt-4"> {product.segment_name}</p>
                         <hr className="w-full py-4 mt-4" />
                         <p className="text-gray-500 ">{product.description}</p>
