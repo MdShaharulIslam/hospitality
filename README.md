@@ -24,6 +24,6 @@ Welcome to MyWebsite! Visit the live site [here]( https://hospitality-a9.web.app
 - firebase: Firebase provides the backend infrastructure for user authentication and data storage.
 - AOS Package: for better Animation.
 - Animate.css: Animation.
-- React-leaflet,
+- React-leaflet.
 
 

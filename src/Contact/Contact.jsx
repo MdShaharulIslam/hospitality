@@ -1,5 +1,6 @@
 import Navber from "../Component/Navber/Navber";
 import { Helmet } from 'react-helmet';
+import ContactMap from "../ContactMap/ContactMap";
 
 
 const ContactForm = () => {
@@ -94,7 +95,9 @@ const ContactForm = () => {
         </button>
       </form>
     </div>
-   
+   <div className="w-60 justify-center items-center m-auto">
+    <ContactMap></ContactMap>
+   </div>
     </div>
     
   );
