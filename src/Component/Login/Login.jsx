@@ -10,7 +10,7 @@ import {
   getAuth
 } from "firebase/auth";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
@@ -19,8 +19,8 @@ const Login = () => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const [showPassword, setShowPassword] = useState(false);
-  const [registerError, setRegisterError] = useState("");
-  const [success, setSuccess] = useState("");
+  const [registerError, setRegisterError] = useState();
+  
   const location = useLocation();
   const navigate = useNavigate();
   console.log("location in the login page", location);
@@ -32,23 +32,23 @@ const Login = () => {
     const password = form.get("password");
     console.log(email, password);
     setRegisterError("");
-    setSuccess("");
+    
     if (password.length < 6) {
-      setRegisterError(" Password should be at least 6 characters");
+      setRegisterError("Password should be at least 6 characters");
       return;
     } else if (!/[A-Z]/.test(password)) {
-      setRegisterError("Give a capital letter must");
+      setRegisterError("Password must contain at least one capital letter");
       return;
     }
 
     setRegisterError("");
-    setSuccess("");
+    
     signIn(email, password)
-      .then((result) => {
-        console.log(result.user);
-        setSuccess("Login successful!");
-        navigate(location?.state ? location.state : "/");
-        toast.success('Login successful!');
+      .then(() => {
+        toast.success("Login successful!");
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 2000); // 2-second delay
       })
       .catch((error) => {
         console.error("you have no account", error);
@@ -61,9 +61,10 @@ const Login = () => {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       console.log(user);
-      setSuccess("Login successful!");
-      navigate(location?.state ? location.state : "/");
       toast.success('Sign in successful!');
+      setTimeout(() => {
+        navigate(location?.state ? location.state : "/");
+      }, 2000); // 2-second delay
     } catch (error) {
       console.error(error);
     }
@@ -74,9 +75,10 @@ const Login = () => {
       const result = await signInWithPopup(auth, githubProvider);
       const user = result.user;
       console.log(user);
-      setSuccess("Login successful!");
-      navigate(location?.state ? location.state : "/");
       toast.success('Sign in successful!');
+      setTimeout(() => {
+        navigate(location?.state ? location.state : "/");
+      }, 2000); // 2-second delay
     } catch (error) {
       console.error(error);
     }
@@ -150,11 +152,9 @@ const Login = () => {
                 Register
               </Link>
             </p>
+            <ToastContainer></ToastContainer>
             {registerError && (
               <p className="text-red-600 text-center">{registerError}</p>
-            )}
-            {success && (
-              <p className="text-green-600 text-center">{success}</p>
             )}
           </div>
         </div>

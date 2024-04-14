@@ -51,7 +51,7 @@ const UpdateProfile = () => {
                         <form onSubmit={update} className="space-y-3">
                             <input type="text" placeholder="Enter Your Name" name="name" defaultValue={user?.displayName || ''} className="input input-bordered w-full max-w-xs" /> 
                             <input type="text" placeholder="Enter Your Photo-Url" name="photourl" defaultValue={user?.photoURL || ''} className="input input-bordered w-full max-w-xs"/>
-                            <button type="submit" className="btn bg-[#69b99d] lg:w-full text-base text-white">Update</button>
+                            <button type="submit" className="btn bg-purple-400 lg:w-full text-base text-white">Update</button>
                         </form>
                     </div>
                 </div>
