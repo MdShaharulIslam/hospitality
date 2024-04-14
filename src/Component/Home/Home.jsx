@@ -8,6 +8,7 @@ import Founder from "../Founder/Founder";
 
 
 
+
 const Home = () => {
     const products = useLoaderData();
     // console.log(products);
@@ -31,6 +32,7 @@ const Home = () => {
            
         </div>
         <div className="w-full flex"> <Footer></Footer></div>
+        
        </div>
     );
 };

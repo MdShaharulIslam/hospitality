@@ -4,6 +4,7 @@ import Navber from "../Navber/Navber";
 import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 
+
 const UpdateProfile = () => {
     const { user } = useContext(AuthContext);
 
@@ -56,6 +57,7 @@ const UpdateProfile = () => {
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 };

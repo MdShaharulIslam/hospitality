@@ -28,6 +28,10 @@ const Registration = () => {
       setRegisterError("Password must contain at least one capital letter");
       return;
     }
+    else if (!/[a-z]/.test(password)) {
+      setRegisterError("Password must contain at least one Small letter");
+      return;
+    }
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {

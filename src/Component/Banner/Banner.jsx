@@ -1,7 +1,8 @@
 import hotel from '/public/hotel.jpg'
 import motel from '/public/motel.avif'
 import resort from '/public/resort.jpg'
-import lodge from '/public/lodge.jpeg'
+import lodge from '/public/lodge.jpg'
+
 
 const Banner = () => {
     return (

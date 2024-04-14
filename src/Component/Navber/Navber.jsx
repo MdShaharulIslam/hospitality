@@ -55,6 +55,15 @@ const Navber = () => {
           Update Profile
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/blogPost"
+          activeClassName=""
+          className={`hover:text-yellow-200 ${activeClasses}`}
+        >
+        Gallary
+        </NavLink>
+      </li>
     </>
   );
 

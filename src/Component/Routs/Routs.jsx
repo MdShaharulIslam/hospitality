@@ -9,6 +9,7 @@ import Registration from "./../Registration/Registration";
 import PrivateRoute from "./PrivetRout";
 import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import Contact from "../../Contact/Contact";
+import RecentBlogPosts from "../../RecentBlogPosts/RecentBlogPosts";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch(`/fake-data.json`),
+      },
+      {
+        path:"/blogPost",
+        element:<PrivateRoute> <RecentBlogPosts></RecentBlogPosts></PrivateRoute>
+       
       },
       {
         path: "/about",

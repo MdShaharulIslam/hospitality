@@ -40,6 +40,10 @@ const Login = () => {
       setRegisterError("Password must contain at least one capital letter");
       return;
     }
+     else if (!/[a-z]/.test(password)) {
+      setRegisterError("Password must contain at least one small letter");
+      return;
+    }
 
     setRegisterError("");
     
@@ -48,7 +52,7 @@ const Login = () => {
         toast.success("Login successful!");
         setTimeout(() => {
           navigate(location?.state ? location.state : "/");
-        }, 2000); // 2-second delay
+        }, 1000); // 2-second delay
       })
       .catch((error) => {
         console.error("you have no account", error);
@@ -64,7 +68,7 @@ const Login = () => {
       toast.success('Sign in successful!');
       setTimeout(() => {
         navigate(location?.state ? location.state : "/");
-      }, 2000); // 2-second delay
+      }, 1000); // 2-second delay
     } catch (error) {
       console.error(error);
     }
@@ -78,7 +82,7 @@ const Login = () => {
       toast.success('Sign in successful!');
       setTimeout(() => {
         navigate(location?.state ? location.state : "/");
-      }, 2000); // 2-second delay
+      }, 1000); // 1-second delay
     } catch (error) {
       console.error(error);
     }
