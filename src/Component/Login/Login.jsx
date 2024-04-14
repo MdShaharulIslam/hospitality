@@ -3,13 +3,12 @@ import { Helmet } from "react-helmet";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navber from "../Navber/Navber";
 import { AuthContext } from "../provider/AuthProvider";
-import { toast } from 'react-toastify'; // Import toast
 import {
   GoogleAuthProvider,
   GithubAuthProvider,
   signInWithPopup,
   getAuth
- } from "firebase/auth";
+} from "firebase/auth";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
@@ -18,6 +17,8 @@ const Login = () => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const [showPassword, setShowPassword] = useState(false);
+  const [registerError, setRegisterError] = useState("");
+  const [success, setSuccess] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
   console.log("location in the login page", location);
@@ -28,16 +29,27 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
-    signIn(email,password)
-      .then(result => {
+    setRegisterError("");
+    setSuccess("");
+    if (password.length < 6) {
+      setRegisterError(" Password should be at least 6 characters");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegisterError("Give a capital letter must");
+      return;
+    }
+
+    setRegisterError("");
+    setSuccess("");
+    signIn(email, password)
+      .then((result) => {
         console.log(result.user);
-        toast.success('Sign in successful!'); // Display success message using toast
-        navigate(location?.state ? location.state : '/');
+        navigate(location?.state ? location.state : "/");
       })
-      .catch(error => {
-        console.error(error);
-        toast.error('Invalid email or password. Please try again.'); // Display error message using toast
-      })
+      .catch((error) => {
+        console.error("you have no account", error);
+        setRegisterError("Invalid email or password. Please try again.");
+      });
   };
 
   const handleGoogleSignIn = async () => {
@@ -130,6 +142,12 @@ const Login = () => {
                 Register
               </Link>
             </p>
+            {registerError && (
+              <p className="text-red-600 text-center">{registerError}</p>
+            )}
+            {success && (
+              <p className="text-green-600 text-center">{success}</p>
+            )}
           </div>
         </div>
       </div>

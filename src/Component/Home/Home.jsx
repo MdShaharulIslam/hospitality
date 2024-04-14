@@ -6,6 +6,7 @@ import Footer from "../Footer/Footer";
 import {Helmet} from "react-helmet";
 import Founder from "../Founder/Founder";
 
+
 const Home = () => {
     const products = useLoaderData();
     // console.log(products);
@@ -24,7 +25,7 @@ const Home = () => {
                
             </div>
             <div className="w-auto my-4 justify-center">  <Founder></Founder></div>
-          
+         
            
         </div>
         <div className="w-full flex"> <Footer></Footer></div>
