@@ -10,6 +10,8 @@ import {
   getAuth
 } from "firebase/auth";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const auth = getAuth();
@@ -44,11 +46,13 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+        setSuccess("Login successful!");
         navigate(location?.state ? location.state : "/");
+        toast.success('Login successful!');
       })
       .catch((error) => {
         console.error("you have no account", error);
-        setRegisterError("Invalid email or password. Please try again.");
+        setRegisterError("Invalid email or password. Please First Register.");
       });
   };
 
@@ -57,7 +61,9 @@ const Login = () => {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       console.log(user);
+      setSuccess("Login successful!");
       navigate(location?.state ? location.state : "/");
+      toast.success('Sign in successful!');
     } catch (error) {
       console.error(error);
     }
@@ -68,7 +74,9 @@ const Login = () => {
       const result = await signInWithPopup(auth, githubProvider);
       const user = result.user;
       console.log(user);
+      setSuccess("Login successful!");
       navigate(location?.state ? location.state : "/");
+      toast.success('Sign in successful!');
     } catch (error) {
       console.error(error);
     }

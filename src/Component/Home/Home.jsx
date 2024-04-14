@@ -7,6 +7,7 @@ import {Helmet} from "react-helmet";
 import Founder from "../Founder/Founder";
 
 
+
 const Home = () => {
     const products = useLoaderData();
     // console.log(products);
@@ -16,6 +17,7 @@ const Home = () => {
         <Helmet><title>Home</title></Helmet>
          <div className="mx-8">
             <Navber />
+            
             <Banner />
             <h1 className="font-extrabold text-4xl text-center my-4">Our Facilities</h1>
             <p className="text-center">We are Providing Best facilities </p>
