@@ -93,7 +93,8 @@ const Login = () => {
       <Helmet>
         <title>Login-Page</title>
       </Helmet>
-      <Navber></Navber>
+      <div className="mx-8"><Navber></Navber></div>
+      
       <h1 className="text-4xl text-center font-poppins font-bold">
         Please login
       </h1>

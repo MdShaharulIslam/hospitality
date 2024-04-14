@@ -11,7 +11,7 @@ import Navber from "../Component/Navber/Navber";
 const RecentBlogPosts = () => {
   return (
     <div className="mx-6">
-      <div className="mc-6"><Navber></Navber></div>
+     <div className="mx-8"><Navber></Navber></div>
       <h2 className="text-2xl font-bold mb-4 text-center">Gallary</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <div className="container">

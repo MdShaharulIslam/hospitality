@@ -52,7 +52,7 @@ const Registration = () => {
   return (
     <div>
       <Helmet><title>Registration-Form</title></Helmet>
-      <Navber></Navber>
+      <div className="mx-8"><Navber></Navber></div>
       <div className="hero">
         <div className="hero-content flex-col">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
