@@ -8,9 +8,13 @@ import pic3 from "/public/3.jpg";
 import pic4 from "/public/4.jpg";
 import { Link } from "react-router-dom";
 import Navber from "../Component/Navber/Navber";
+import { Helmet } from "react-helmet";
 const RecentBlogPosts = () => {
   return (
     <div className="mx-6">
+      <Helmet>
+        <title>Gllary</title>
+      </Helmet>
      <div className="mx-8"><Navber></Navber></div>
       <h2 className="text-2xl font-bold mb-4 text-center">Gallary</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
