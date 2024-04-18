@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navber from "../Navber/Navber";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { getAuth, updateProfile } from "firebase/auth";
 
 const Registration = () => {
+  const location = useLocation(); // Move inside the component
+  const navigate = useNavigate(); // Move inside the component
+
   const auth = getAuth();
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowpassword] = useState(false);
@@ -27,9 +30,8 @@ const Registration = () => {
     } else if (!/[A-Z]/.test(password)) {
       setRegisterError("Password must contain at least one capital letter");
       return;
-    }
-    else if (!/[a-z]/.test(password)) {
-      setRegisterError("Password must contain at least one Small letter");
+    } else if (!/[a-z]/.test(password)) {
+      setRegisterError("Password must contain at least one small letter");
       return;
     }
 
@@ -40,22 +42,25 @@ const Registration = () => {
           photoURL: photo
         }).then(() => {
           toast.success("Registration successful!");
+          setTimeout(() => {
+            navigate(location?.state ? location.state : "/");
+          }, 1000); // 1-second delay
         }).catch((error) => {
           setRegisterError(error.message);
         });
       })
       .catch((error) => {
-        setRegisterError('Email Already exist',error.message);
+        setRegisterError(error.message);
       });
   };
 
   return (
     <div>
       <Helmet><title>Registration-Form</title></Helmet>
-      <div className="mx-8"><Navber></Navber></div>
+      <div className="mx-8"><Navber /></div>
       <div className="hero">
-        <div className="hero-content flex-col">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="hero-content flex-col bg-purple-400 rounded-lg">
+          <div data-aos="flip-left" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleRegister} className="card-body">
               <h1 className="text-2xl text-center font-poppins font-bold">
                 Register Your Account
@@ -122,8 +127,8 @@ const Registration = () => {
             </form>
             <ToastContainer />
             {registerError && <p className="text-red-600 text-center">{registerError}</p>}
-            <p className="text-center mb-4">
-              Already Registered? <Link to="/login">Login</Link>
+            <p className="text-center mb-4 ">
+              Already Registered? <Link to="/login" className="text-blue-500">Login</Link>
             </p>
           </div>
         </div>

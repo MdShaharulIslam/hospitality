@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet";
 import Navber from "../Navber/Navber";
 import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
-
+import {  ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProfile = () => {
     const { user } = useContext(AuthContext);
@@ -18,9 +19,11 @@ const UpdateProfile = () => {
             photoURL: photourl
         })
         .then(() => {
-            console.log('Profile updated successfully');
+            toast.success('Profile updated successfully');
+           
         })
         .catch((error) => {
+            toast.error('Please login your profile');
             console.error('Error updating profile:', error);
         });
     };
@@ -29,11 +32,11 @@ const UpdateProfile = () => {
         <div className="mx-8">
             <Helmet><title>Update-Profile</title></Helmet>
             <Navber />
-            <div className="px-2">
+            <div className="px-2 ">
                 <Helmet>
                     <title>Update Profile</title>
                 </Helmet>
-                <div className="flex lg:flex-row flex-col justify-center items-center lg:w-[800px] mx-auto border-2 rounded-lg p-5 gap-5 my-10">
+                <div data-aos="flip-left" className=" flex lg:flex-row flex-col justify-center items-center lg:w-[800px] mx-auto border-2 rounded-lg p-5 gap-5 my-10 bg-purple-400">
                     <div className="lg:w-[400px] p-5 space-y-3">
                         {user && user.photoURL && (
                             <img className="w-[100px] rounded-full mx-auto" src={user.photoURL} alt="" />
@@ -45,7 +48,7 @@ const UpdateProfile = () => {
                                 <span className="font-bold">Name:</span>{user.displayName}
                             </h2>
                         ) || (
-                            <p className="text-center border-b-2">No Entry</p>
+                            <p className="text-center border-b-2">No User</p>
                         )}
                     </div>
                     <div className="lg:w-[400px] text-center p-5"> 
@@ -54,6 +57,7 @@ const UpdateProfile = () => {
                             <input type="text" placeholder="Enter Your Photo-Url" name="photourl" defaultValue={user?.photoURL || ''} className="input input-bordered w-full max-w-xs"/>
                             <button type="submit" className="btn bg-purple-400 lg:w-full text-base text-white">Update</button>
                         </form>
+                        <ToastContainer></ToastContainer>
                     </div>
                 </div>
             </div>

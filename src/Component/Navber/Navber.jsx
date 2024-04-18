@@ -5,6 +5,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
 import { getAuth, updateProfile } from "firebase/auth";
 
+
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
   const auth = getAuth();
@@ -71,6 +72,7 @@ const Navber = () => {
        e.preventDefault();
     const photourl = e.target.photourl.value;
      updateProfile(auth.currentUser, {
+          
       photoURL: photourl
     })
     
@@ -118,7 +120,8 @@ const Navber = () => {
       </div>
       <div className="navbar-end">
         <div className="w-10 rounded-full mr-4"></div>
-        <div className="w-10 rounded-full mr-4">
+        <div className="w-10 rounded-full mr-4 tooltip" data-tip={user?.displayName}>
+        
           {user ? <img className="w-10 rounded-full" alt="#" src={user.photoURL} /> : <img alt="#" src={userp} />}
         </div>
         {user ? <button onClick={handleSignOut} className="btn">Sign Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}

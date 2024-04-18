@@ -8,7 +8,8 @@ import {
   GithubAuthProvider,
   signInWithPopup,
   getAuth
-} from "firebase/auth";
+} 
+from "firebase/auth";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -98,9 +99,9 @@ const Login = () => {
       <h1 className="text-4xl text-center font-poppins font-bold">
         Please login
       </h1>
-      <div className="hero  ">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="hero ">
+        <div  className="hero-content flex-col lg:flex-row-reverse bg-purple-400 rounded-lg" >
+          <div data-aos="flip-left" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
