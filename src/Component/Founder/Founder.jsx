@@ -31,5 +31,4 @@ const Founder = () => {
     </div>
   );
 };
-
 export default Founder;
